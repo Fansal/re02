@@ -1,0 +1,638 @@
+<html lang="zh-CN">
+  <script id="allow-copy_script">
+    (function agent() {
+      let unlock = false;
+      document.addEventListener("allow_copy", (event) => {
+        unlock = event.detail.unlock;
+      });
+
+      const copyEvents = [
+        "copy",
+        "cut",
+        "contextmenu",
+        "selectstart",
+        "mousedown",
+        "mouseup",
+        "mousemove",
+        "keydown",
+        "keypress",
+        "keyup",
+      ];
+      const rejectOtherHandlers = (e) => {
+        if (unlock) {
+          e.stopPropagation();
+          if (e.stopImmediatePropagation) e.stopImmediatePropagation();
+        }
+      };
+      copyEvents.forEach((evt) => {
+        document.documentElement.addEventListener(evt, rejectOtherHandlers, {
+          capture: true,
+        });
+      });
+    })();
+  </script>
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="swith2233" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,shrink-to-fit=no"
+    />
+    <title>my wz</title>
+    <link rel="icon" href="./img/core-img" />
+    <!--可在文件夹中更改-->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  
+  <body _c_t_j1="1">
+    <div class="top-search-area">
+      <div
+        class="modal fade"
+        id="searchModal"
+        tabindex="-1"
+        role="dialog"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-body">
+              <button type="button" class="btn close-btn" data-dismiss="modal">
+                <i class="ti-close"></i>
+              </button>
+              <form action="index.html" method="post">
+                <input
+                  type="search"
+                  name="top-search-bar"
+                  class="form-control"
+                  placeholder="Search and hit enter..."
+                />
+                <button type="submit">Search</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <header class="header-area">
+      <div class="main-header-area">
+        <div class="classy-nav-container breakpoint-off">
+          <div class="container">
+            <nav class="classy-navbar justify-content-between" id="alimeNav">
+              <div class="classy-navbar-toggler">
+                <span class="navbarToggler"
+                  ><span></span><span></span><span></span
+                ></span>
+              </div>
+              <div class="classy-menu">
+                <div class="classycloseIcon">
+                  <div class="cross-wrap">
+                    <span class="top"></span><span class="bottom"></span>
+                  </div>
+                </div>
+                
+                <div class="classynav">
+                  <ul id="nav">
+                    <li class="active">
+                      <a href="./index.html">主页&nbsp;</a>
+                    </li>
+                    <li class="cn-dropdown-item has-down">
+                      <a href="#">目录</a>
+                      <ul class="dropdown">
+                        
+                        <li><a href="./index.html"></a></li>
+                        <li><a href="./about.html">-可改</a></li>
+                        <li><a href="./gallery.html">-可改</a></li>
+                        <li><a href="www/op.html">启动</a></li>
+                        <li><a href="./single-blog.html">留言板</a></li>
+                        <li><a href="./contact.html">-捐赠</a></li>
+                        <li>
+                          <audio controls>
+                            <source src="audio/ffxdz.mp3" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                                 </audio>
+                        </li>
+                        <ul>
+                        <li class="has-down">
+                          <a href="#">-&nbsp;尽情期待</a>
+                          <ul class="dropdown">
+                            <li><a href="#">- 可改</a></li>
+                          </ul>
+                          <span class="dd-trigger"></span>
+                        </li>
+                      </ul>
+                      <span class="dd-trigger"></span>
+                    </li>
+                    <li><a href="./about.html">可改</a></li>
+                    <li><a href="./gallery.html">可改&nbsp;</a></li>
+                    <li><a href="./blog.html">可改&nbsp;</a></li>
+                    <li><a href="./contact.html">可改&nbsp;</a></li>
+                  </ul>
+                  <div
+                    class="search-icon"
+                    data-toggle="modal"
+                    data-target="#searchModal"
+                  >
+                    <i class="ti-search"></i>
+                  </div>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!--需要其他HTML页面，可修改栏目名称-->
+
+    <section class="welcome-area">
+      <div class="welcome-slides owl-carousel owl-loaded owl-drag">
+        <div class="owl-stage-outer">
+          <div
+            class="owl-stage"
+            style="
+              transform: translate3d(-3669px, 0px, 0px);
+              transition: all 1s ease 0s;
+              width: 7338px;
+            "
+          >
+            <div class="owl-item cloned" style="width: 1223px">
+              <div
+                class="single-welcome-slide bg-img bg-overlay"
+                style="background-image: url(img/bg-img/112.jpg)"
+              >
+                <div class="container h-100">
+                  <div class="row h-100 align-items-center">
+                    <div class="col-12 col-lg-8 col-xl-6">
+                      <div class="welcome-text">
+                        <h2
+                          data-animation="bounceInDown"
+                          data-delay="900ms"
+                          style="animation-delay: 900ms; opacity: 0"
+                        >
+                          可改<br />
+                        </h2>
+                        <p
+                          data-animation="bounceInDown"
+                          data-delay="500ms"
+                          style="animation-delay: 500ms; opacity: 0"
+                        >
+                          可改
+                        </p>
+                        <div
+                          class="hero-btn-group"
+                          data-animation="bounceInDown"
+                          data-delay="100ms"
+                          style="animation-delay: 100ms; opacity: 0"
+                        >
+                          <a
+                            href="https://v.douyin.com/idEcTNjM/ 4@1.com 08/19"
+                            target="_blank"
+                            class="btn alime-btn mb-3 mb-sm-0 mr-4"
+                            >可改</a
+                          >
+                          <a class="hero-mail-contact">可改</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="owl-item cloned" style="width: 1223px">
+              <div
+                class="single-welcome-slide bg-img bg-overlay"
+                style="background-image: url(img/bg-img/113.jpg)"
+              >
+                <div class="container h-100">
+                  <div class="row h-100 align-items-center">
+                    <div class="col-12 col-lg-8 col-xl-6">
+                      <div class="welcome-text">
+                        <h2
+                          data-animation="bounceInUp"
+                          data-delay="100ms"
+                          style="animation-delay: 100ms; opacity: 0"
+                        >
+                          <br />可改
+                        </h2>
+                        <p
+                          data-animation="bounceInUp"
+                          data-delay="500ms"
+                          style="animation-delay: 500ms; opacity: 0"
+                        >
+                          可改
+                        </p>
+                        <div
+                          class="hero-btn-group"
+                          data-animation="bounceInUp"
+                          data-delay="900ms"
+                          style="animation-delay: 900ms; opacity: 0"
+                        >
+                          <a
+                            href="https://v.douyin.com/idEcTNjM/ 4@1.com 08/19"
+                            target="_blank"
+                            class="btn alime-btn mb-3 mb-sm-0 mr-4"
+                            >可改</a
+                          >
+                          <a class="hero-mail-contact">可改</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="owl-item" style="width: 1223px">
+              <div
+                class="single-welcome-slide bg-img bg-overlay"
+                style="background-image: url(img/bg-img/112.jpg)"
+              >
+                <div class="container h-100">
+                  <div class="row h-100 align-items-center">
+                    <div class="col-12 col-lg-8 col-xl-6">
+                      <div class="welcome-text">
+                        <h2
+                          data-animation="bounceInDown"
+                          data-delay="900ms"
+                          style="animation-delay: 900ms; opacity: 0"
+                          class=""
+                        >
+                          可改<br />
+                        </h2>
+                        <p
+                          data-animation="bounceInDown"
+                          data-delay="500ms"
+                          style="animation-delay: 500ms; opacity: 0"
+                          class=""
+                        >
+                          可改
+                        </p>
+                        <div
+                          class="hero-btn-group"
+                          data-animation="bounceInDown"
+                          data-delay="100ms"
+                          style="animation-delay: 100ms; opacity: 0"
+                        >
+                          <a
+                            href="https://v.douyin.com/idEcTNjM/ 4@1.com 08/19"
+                            target="_blank"
+                            class="btn alime-btn mb-3 mb-sm-0 mr-4"
+                            >可改</a
+                          >
+                          <a class="hero-mail-contact">可改</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="owl-item active" style="width: 1223px">
+              <div
+                class="single-welcome-slide bg-img bg-overlay"
+                style="background-image: url(img/bg-img/113.jpg)"
+              >
+                <div class="container h-100">
+                  <div class="row h-100 align-items-center">
+                    <div class="col-12 col-lg-8 col-xl-6">
+                      <div class="welcome-text">
+                        <h2
+                          data-animation="bounceInUp"
+                          data-delay="100ms"
+                          style="animation-delay: 100ms; opacity: 1"
+                          class="animated bounceInUp"
+                        >
+                          <br />可改
+                        </h2>
+                        <p
+                          data-animation="bounceInUp"
+                          data-delay="500ms"
+                          style="animation-delay: 500ms; opacity: 1"
+                          class="animated bounceInUp"
+                        >
+                          可改
+                        </p>
+                        <div
+                          class="hero-btn-group animated bounceInUp"
+                          data-animation="bounceInUp"
+                          data-delay="900ms"
+                          style="animation-delay: 900ms; opacity: 1"
+                        >
+                          <a
+                            href="https://v.douyin.com/idEcTNjM/ 4@1.com 08/19"
+                            target="_blank"
+                            class="btn alime-btn mb-3 mb-sm-0 mr-4"
+                            >点击成为佳人可改</a
+                          >
+                          <a class="hero-mail-contact"
+                            >佳期辰诞，忍顾鹊桥归路。可改</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="owl-item cloned" style="width: 1223px">
+              <div
+                class="single-welcome-slide bg-img bg-overlay"
+                style="background-image: url(img/bg-img/112.jpg)"
+              >
+                <div class="container h-100">
+                  <div class="row h-100 align-items-center">
+                    <div class="col-12 col-lg-8 col-xl-6">
+                      <div class="welcome-text">
+                        <h2
+                          data-animation="bounceInDown"
+                          data-delay="900ms"
+                          style="animation-delay: 900ms; opacity: 0"
+                        >
+                          致肖鹿可改<br />
+                        </h2>
+                        <p
+                          data-animation="bounceInDown"
+                          data-delay="500ms"
+                          style="animation-delay: 500ms; opacity: 0"
+                        >
+                          初见只是鹿人，再见已是佳人可改
+                        </p>
+                        <div
+                          class="hero-btn-group"
+                          data-animation="bounceInDown"
+                          data-delay="100ms"
+                          style="animation-delay: 100ms; opacity: 0"
+                        >
+                          <a
+                            href="https://v.douyin.com/idEcTNjM/ 4@1.com 08/19"
+                            target="_blank"
+                            class="btn alime-btn mb-3 mb-sm-0 mr-4"
+                            >点击成为佳人可改</a
+                          >
+                          <a class="hero-mail-contact"
+                            >佳期如梦，银汉迢迢暗度可改</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="owl-item cloned" style="width: 1223px">
+              <div
+                class="single-welcome-slide bg-img bg-overlay"
+                style="background-image: url(img/bg-img/113.jpg)"
+              >
+                <div class="container h-100">
+                  <div class="row h-100 align-items-center">
+                    <div class="col-12 col-lg-8 col-xl-6">
+                      <div class="welcome-text">
+                        <h2
+                          data-animation="bounceInUp"
+                          data-delay="100ms"
+                          style="animation-delay: 100ms; opacity: 0"
+                        >
+                          <br />可爱的佳佳子可改
+                        </h2>
+                        <p
+                          data-animation="bounceInUp"
+                          data-delay="500ms"
+                          style="animation-delay: 500ms; opacity: 0"
+                        >
+                          人间值得佳佳子，惊鸿一瞥终生定。二十四桥明月夜，佳人处处伴鹿行。可改
+                        </p>
+                        <div
+                          class="hero-btn-group"
+                          data-animation="bounceInUp"
+                          data-delay="900ms"
+                          style="animation-delay: 900ms; opacity: 0"
+                        >
+                          <a
+                            href="https://v.douyin.com/idEcTNjM/ 4@1.com 08/19"
+                            target="_blank"
+                            class="btn alime-btn mb-3 mb-sm-0 mr-4"
+                            >点击成为佳人可改</a
+                          >
+                          <a class="hero-mail-contact"
+                            >佳期辰诞，忍顾鹊桥归路。可改</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="owl-nav">
+          <div class="owl-prev"><i class="ti-arrow-left"></i></div>
+          <div class="owl-next"><i class="ti-arrow-right"></i></div>
+        </div>
+        <div class="owl-dots">
+          <div class="owl-dot"><span></span></div>
+          <div class="owl-dot active"><span></span></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="alime-portfolio-area section-padding-80 clearfix">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <div class="alime-projects-menu">
+              <div class="portfolio-menu text-center">
+                <button class="btn active" data-filter="*">首页</button>
+                <button class="btn" data-filter=".photo">照片&nbsp;</button>
+                <button class="btn" data-filter=".video">视频&nbsp;</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="row alime-portfolio"
+          style="position: relative; height: 1583.25px"
+        >
+          <div
+            class="col-12 col-sm-6 col-lg-3 single_gallery_item photo mb-30 wow fadeInUp"
+            data-wow-delay="100ms"
+            style="
+              position: absolute;
+              left: 0%;
+              top: 0px;
+              visibility: hidden;
+              animation-delay: 100ms;
+              animation-name: none;
+            "
+          >
+            <div class="single-portfolio-content">
+              <img src="img/bg-img/1 (1).jpg" alt="" />
+              <div class="hover-content">
+                <a href="img/bg-img/1 (1).jpg" class="portfolio-img">+</a>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="col-12 col-sm-6 col-lg-3 single_gallery_item photo mb-30 wow fadeInUp"
+            data-wow-delay="300ms"
+            style="
+              position: absolute;
+              left: 24.9992%;
+              top: 0px;
+              visibility: hidden;
+              animation-delay: 300ms;
+              animation-name: none;
+            "
+          >
+            <div class="single-portfolio-content">
+              <img src="img/bg-img/1 (10).jpg" alt="" />
+              <div class="hover-content">
+                <a href="img/bg-img/1 (10).jpg" class="portfolio-img">+</a>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="col-12 col-sm-6 col-lg-3 single_gallery_item photo mb-30 wow fadeInUp"
+            data-wow-delay="500ms"
+            style="
+              position: absolute;
+              left: 49.9984%;
+              top: 0px;
+              visibility: hidden;
+              animation-delay: 500ms;
+              animation-name: none;
+            "
+          >
+            <div class="single-portfolio-content">
+              <img src="img/new/1 (8).jpg" alt="" />
+              <div class="hover-content">
+                <a href="img/new/1 (8).jpg" class="portfolio-img">+</a>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="col-12 col-sm-6 col-lg-3 single_gallery_item photo mb-30 wow fadeInUp"
+            data-wow-delay="700ms"
+            style="
+              position: absolute;
+              left: 74.9976%;
+              top: 0px;
+              visibility: hidden;
+              animation-delay: 700ms;
+              animation-name: none;
+            "
+          >
+            <div class="single-portfolio-content">
+              <img src="img/bg-img/1 (12).jpg" alt="" />
+              <div class="hover-content">
+                <a href="img/bg-img/1 (12).jpg" class="portfolio-img">+</a>
+              </div>
+            </div>
+          </div>
+          <!--导入图片-->
+        </div>
+        <div class="row">
+          <div
+            class="col-12 text-center wow fadeInUp"
+            data-wow-delay="700ms"
+            style="
+              visibility: hidden;
+              animation-delay: 700ms;
+              animation-name: none;
+            "
+          >
+            <a href="./gallery.html" class="btn alime-btn btn-2 mt-15">更多</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="follow-area clearfix">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="section-heading text-center">
+              <h4>二十四群的骑士守护最好的佳佳。可改</h4>
+              <h2>人间值得佳佳子，惊鸿一瞥终生定。可改</h2>
+              <h2>二十四桥明月夜，佳人处处伴鹿行。可改</h2>
+              <p>——24群骑士团可改</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="instragram-feed-area owl-carousel owl-loaded owl-drag">
+        <div class="owl-stage-outer">
+          <div
+            class="owl-stage"
+            style="
+              transform: translate3d(-2445px, 0px, 0px);
+              transition: all 1s ease 0s;
+              width: 7135px;
+            "
+          >
+            <div class="owl-item cloned" style="width: 203.833px">
+              <div class="single-instagram-item">
+                <img src="img/bg-img/5 (9).jpg" alt="" />
+                <div
+                  class="instagram-hover-content text-center d-flex align-items-center justify-content-center"
+                >
+                  <a href="#"
+                    ><i class="ti-instagram" aria-hidden="true"></i>
+                    <span>佳佳子</span></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="owl-nav disabled">
+          <div class="owl-prev">prev</div>
+          <div class="owl-next">next</div>
+        </div>
+        <div class="owl-dots">
+          <div class="owl-dot active"><span></span></div>
+          <div class="owl-dot"><span></span></div>
+          <div class="owl-dot"><span></span></div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer-area">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div
+              class="footer-content d-flex align-items-center justify-content-between"
+            >
+              <div class="copywrite-text">
+                <p>
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                  &nbsp;©
+                 
+                  </script>
+                  感谢大家 <i class="fa fa-heart-o" aria-hidden="true"></i> by
+                  <a href="https://github.com/fansal" target="_blank"
+                    >swith2233</a
+                  >
+                </p>
+              </div>
+              <div class="footer-logo">
+                <a href="#"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  <div id="footer">
+  </body>
+ 
+</html>
